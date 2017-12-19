@@ -25,7 +25,7 @@ These 8 parts are extremely hard for a programmer like me, but I can do some par
 
 
 
-Testing 
+#Testing 
 I will end up with 2 decks. One is for player 1 and the other one is for player 2.
 I also need to check the five different cards to see if they work.
 The “attack” cards can make opponent lose 1 health if the opponent does not have a “block” card. 
