@@ -3,16 +3,20 @@ def deckplayer1(a,b):
     cards=random.randint(a,b)
     pai1=cards%7
     if pai1 == 0 or pai1 ==1:
-        print("from player1 to player2:ATTACK")
-        global player2life
-        decision=int(input("Do player 2 want to use a block card,1.yes  2.no?"))
-        if decision==1:
-            print("player1's attack is blocked")
-            player2life=player2life
+        decision1=int(input("player1 got an attack card, do player1 want to use it 1.yes 2.no"))
+        if decision1==1:
+            print("from player1 to player2:ATTACK")
+            global player2life
+            decision2=int(input("Do player 2 want to use a block card,1.yes  2.no?"))
+            if decision2==1:
+                print("player1's attack is blocked")
+                player2life=player2life
+            else:
+                player2life = player2life-1
         else:
-            player2life = player2life-1
+            print("player1 keeps the attack card")
     elif pai1 == 2 or pai1==3:
-        print("block")
+        print("player1 gain block card")
 
     elif pai1 == 4:
         print("player1 use HEART")
@@ -60,17 +64,21 @@ def deckplayer2(a,b):
     pai2=cards%7
 
     if pai2 == 0 or pai2 ==1:
-        print("from player2 to player1: ATTACK")
-        decision2=int(input("Do player1 want to use a block card,1. yes 2. no"))
-        global player1life
-        if decision2== 1:
-            print("player2's attack is blocked")
-            player1life=player1life
+        decision1=int(input("player2 got a attack card, do player2 want to use it 1.yes 2.no"))
+        if decision1==1:
+            print("from player2 to player1: ATTACK")
+            decision2=int(input("Do player1 want to use a block card,1. yes 2. no"))
+            global player1life
+            if decision2== 1:
+                print("player2's attack is blocked")
+                player1life=player1life
+            else:
+                player1life= player1life-1
         else:
-            player1life= player1life-1
+            print("player2 keeps the attack card")
     
     elif pai2 == 2 or pai2 ==3:
-        print("block")
+        print("player2 gain block card")
         
         
     elif pai2 == 4:
