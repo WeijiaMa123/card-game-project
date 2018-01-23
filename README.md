@@ -1,5 +1,6 @@
 ## card-game-project
 **Big Picture:**
+
 My project is a video game. It will be a game about cards. In this game, there are 2 players. The goal of this game is to kill the opponent.There are different kinds of cards with different functions. There could be different character with different skills. I can even make the winner earn some money in the game. The winner can use it to buy new characters.
 
 **Plan:**
