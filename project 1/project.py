@@ -114,6 +114,14 @@ def deckplayer2(a,b):
         else:
             print("player 2 keep a card")
         
+def the_engine():
+    while player1life>0 and player2life>0:
+        deckplayer1(1,7)
+        deckplayer1(1,7)
+        deckplayer2(1,7)
+        deckplayer2(1,7)
+        print("player1 health:",player1life)
+        print("player2 health:",player2life)
 
         
 print("This is a world of war. Empires are fighting for lands and resources. Now we have 2 army meeting.")
@@ -121,10 +129,28 @@ print("This war is gonna be one of the greatest fight in the human history. The 
 player1life = 3
 player2life = 3
 
-while player1life>=0 or player2life>=0:
-    deckplayer1(1,7)
-    deckplayer1(1,7)
-    deckplayer2(1,7)
-    deckplayer2(1,7)
-    print("player1:",player1life)
-    print("player2:",player2life)
+the_engine()
+
+if player1life <= 0:
+    again=input("To player 1: You lose the battle and becomes a salve. But do you still have the spirit to win! 1.Yes 2.No?")
+    if again=="1":
+        print("Chapter 2: Second Chance")
+        print("Player1, you are a real fighter. You leads a slave evenge and gain a huge slave army.")
+        print("Player 1 meets Player 2. Another battle begins!")
+        the_engine()
+    else:
+        print("Slave life is horrible. But I don't care and just want to take a rest.")
+        print("GAME OVER")
+        
+elif player2life <= 0:
+    again2=input("To player 2: You lose the battle and becomes a salve. But do you still have the spirit to win! 1.Yes 2.No?")
+    if again2=="1":
+        print("Chapter 2: Second Chance")
+        print("Player 2, you are a real fighter. You leads a slave evenge and gain a huge slave army.")
+        print("Player 2 meets Player 1. Another battle begins!")
+        the_engine()
+    else:
+        print("Slave life is horrible. But I don't care and just want to take a rest.")
+        print("GAME OVER")
+     
+    
