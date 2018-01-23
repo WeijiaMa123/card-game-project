@@ -21,3 +21,4 @@ I will end up with 2 decks. One is for player 1 and the other one is for player 
 
 
 
+:+1: 
