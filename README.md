@@ -11,7 +11,7 @@ My project is a video game. It will be a game about cards. In this game, there a
 -The “heart” card makes you gain 1 health. 
 -The “alien invasion” card forces your opponent to use a “attack” card that is not toward you. If your opponent doesn't use an “attack” card, he will lose 1 health point. 
 -The “peace” card makes you and your opponent both gain 1 health point. If you reach 3 health points, you can't add more health.
-Every player can keep block cards,peace cards and attack cards if they decide not to use the cards.
+*Every player can keep block cards,peace cards and attack cards if they decide not to use the cards.
 The end of the game is when one of the player’s health goes to 0.
 **Problems**
 I can’t check if the players have the block cards because my deck is a random function that keeps going on. I am unable to monitor the situation as it is happening.  
