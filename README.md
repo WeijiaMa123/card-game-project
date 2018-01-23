@@ -20,7 +20,7 @@ Make the game work by creating the system of terms. Each player needs to gain 2 
 
 -The “peace” card makes you and your opponent both gain 1 health point. If you reach 3 health points, you can't add more health.
 
-*Every player can keep block cards,peace cards and attack cards if they decide not to use the cards.
+-Every player can keep block cards,peace cards and attack cards if they decide not to use the cards.
 The end of the game is when one of the player’s health goes to 0.
 
 **Problems**
