@@ -11,9 +11,7 @@ black=(0,0,0)
 
 clock=pygame.time.Clock()
 
-
-
-
+#def cards():
 
 
 def game_loop():
@@ -22,14 +20,17 @@ def game_loop():
 
     while loop:
         for event in pygame.event.get():
-            #print(event)
+            print(event)
             if event.type == pygame.QUIT:
                 pygame.quit()
                 quit()
-        gameDisplay.fill(black)
+        largeText = pygame.font.Font('freesansbold.ttf', 115)
+        TextSurf, TextRect = text_objects("A bit Racy", largeText)
+        TextRect.center = ((display_width / 2), (display_height / 2))
+        gameDisplay.blit(TextSurf, TextRect)
+        gameDisplay.fill(white)
         pygame.display.update()
         clock.tick(15)
-
 
 
 game_loop()
@@ -155,6 +156,7 @@ def game_intro():
 
         pygame.display.update()
         clock.tick(15)
+        
 def unpause():
     global pause
     pause = False
