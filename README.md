@@ -42,7 +42,7 @@ I will end up with 2 decks. One is for player 1 and the other one is for player 
 
 
 
-**Second Round **
+## Second Round 
 
 **Use of pygame**
 Use pygame to add graphics to the game. For every card, I can define a function like a button. When the player click on the card, he will use it. I can add some images, words on the card by using the features of Pygame such as drawing and loading images. I can also add some sound effects to make the game cooler. I can make a "game intro" and "try again" pages. 
