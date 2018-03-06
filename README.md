@@ -45,11 +45,14 @@ I will end up with 2 decks. One is for player 1 and the other one is for player 
 ## Second Round 
 
 **Use of pygame**
+
 Use pygame to add graphics to the game. For every card, I can define a function like a button. When the player click on the card, he will use it. I can add some images, words on the card by using the features of Pygame such as drawing and loading images. I can also add some sound effects to make the game cooler. I can make a "game intro" and "try again" pages. 
 
 **Changes about codes in my first round**
+
 I will make some major changes about the code and the game I designed. I will change my game loop because my player can't really play my old game. I should make players pick what card they use and what card they keep. At the first round, my codes are really sloppy because I made only two functions which are the engine function and the deck function. I also used many global varibles which are very confusing. I should define more functions. 
 
 **What contents I may add to the game**
+
 If I did other codes pretty easily, I may add some more cards in the game. I can also make this game for more players. But it is still just some thoughts.
 
