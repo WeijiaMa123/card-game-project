@@ -10,12 +10,21 @@ white=(255,255,255)
 black=(0,0,0)
 
 clock=pygame.time.Clock()
-
-#def cards():
+pygame.display.set_caption("The war of cards")
 
 def text_objects(text, font):
     textSurface = font.render(text, True, black)
     return textSurface, textSurface.get_rect()
+
+
+def cards():
+    pygame.draw.rect(gameDisplay, black, (300, 200, 120, 150))
+
+
+def random_deck():
+    
+
+
 
 
 def game_loop():
@@ -29,13 +38,16 @@ def game_loop():
                 pygame.quit()
                 quit()
 
-        largeText = pygame.font.Font('freesansbold.ttf', 115)
-        TextSurf, TextRect = text_objects("A bit Racy", largeText)
-        TextRect.center = ((screen_width / 2), (screen_length / 2))
-        gameDisplay.blit(TextSurf, TextRect)
+
         gameDisplay.fill(white)
+        cards()
         pygame.display.update()
         clock.tick(15)
+
+
+
+
+
 
 
 game_loop()
