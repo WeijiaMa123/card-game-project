@@ -13,6 +13,10 @@ clock=pygame.time.Clock()
 
 #def cards():
 
+def text_objects(text, font):
+    textSurface = font.render(text, True, black)
+    return textSurface, textSurface.get_rect()
+
 
 def game_loop():
 
@@ -24,9 +28,10 @@ def game_loop():
             if event.type == pygame.QUIT:
                 pygame.quit()
                 quit()
+
         largeText = pygame.font.Font('freesansbold.ttf', 115)
         TextSurf, TextRect = text_objects("A bit Racy", largeText)
-        TextRect.center = ((display_width / 2), (display_height / 2))
+        TextRect.center = ((screen_width / 2), (screen_length / 2))
         gameDisplay.blit(TextSurf, TextRect)
         gameDisplay.fill(white)
         pygame.display.update()
