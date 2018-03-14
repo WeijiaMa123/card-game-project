@@ -3,8 +3,8 @@ import time
 import random
 
 pygame.init()
-screen_width = 800
-screen_length = 700
+screen_width = 1100
+screen_length = 650
 gameDisplay = pygame.display.set_mode((screen_width,screen_length))
 white=(255,255,255)
 black=(0,0,0)
@@ -21,6 +21,12 @@ def cards(x,y):
     gameDisplay.blit(card_back, (x, y))
     mouse = pygame.mouse.get_pos()
     click =pygame.mouse.get_pressed()
+
+
+def player_pic(x,y,pic_choice):
+    picture= pygame.image.load(pic_choice)
+    gameDisplay.blit(picture,(x,y))
+
 
 
 
@@ -47,13 +53,15 @@ def game_loop():
 
         gameDisplay.fill(white)
         cards(50,10)
-        cards(250,10)
-        cards(450,10)
-        cards(650,10)
-        cards(50,540)
-        cards(250,540)
-        cards(450,540)
-        cards(650,540)
+        cards(300,10)
+        cards(550,10)
+
+        cards(50,350)
+        cards(300,350)
+        cards(550,350)
+
+        player_pic(900,10,"head 1.png")
+        player_pic(900, 350, "head 2.png")
 
         pygame.display.update()
         clock.tick(15)
