@@ -4,7 +4,7 @@ import random
 
 pygame.init()
 screen_width = 800
-screen_length = 1000
+screen_length = 700
 gameDisplay = pygame.display.set_mode((screen_width,screen_length))
 white=(255,255,255)
 black=(0,0,0)
@@ -12,16 +12,22 @@ black=(0,0,0)
 clock=pygame.time.Clock()
 pygame.display.set_caption("The war of cards")
 
-def text_objects(text, font):
-    textSurface = font.render(text, True, black)
-    return textSurface, textSurface.get_rect()
 
 
-def cards():
-    pygame.draw.rect(gameDisplay, black, (300, 200, 120, 150))
+def cards(x,y):
+
+    #pygame.draw.rect(gameDisplay, black, (x, y, 120, 150))
+    card_back =pygame.image.load("cardback.jpg")
+    gameDisplay.blit(card_back, (x, y))
+    mouse = pygame.mouse.get_pos()
+    click =pygame.mouse.get_pressed()
 
 
-def random_deck():
+
+
+
+
+
     
 
 
@@ -40,7 +46,15 @@ def game_loop():
 
 
         gameDisplay.fill(white)
-        cards()
+        cards(50,10)
+        cards(250,10)
+        cards(450,10)
+        cards(650,10)
+        cards(50,540)
+        cards(250,540)
+        cards(450,540)
+        cards(650,540)
+
         pygame.display.update()
         clock.tick(15)
 
