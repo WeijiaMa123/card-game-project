@@ -50,7 +50,14 @@ Use pygame to add graphics to the game. For every card, I can define a function 
 
 **Changes about codes in my first round**
 
-I will make some major changes about the code and the game I designed. I will change my game loop because my player can't really play my old game. I should make players pick what card they use and what card they keep. At the first round, my codes are really sloppy because I made only two functions which are the engine function and the deck function. I also used many global varibles which are very confusing. I should define more functions. 
+I will make some major changes about the code and the game I designed. I will change my game loop because my player can't really play my old game. I should make players pick what card they use and what card they keep. At the first round, my codes are really sloppy because I made only two functions which are the engine function and the deck function. I also used many global varibles which are very confusing. I should define more functions.
+
+**About making the game playable**
+
+My old design for the game is boring because your opponent can see your card. It is also a two people game on one computer. I have ideas of make my game for only one player. I wants to make bosses and the goal is to kill the boss. The bosses are not smart, they do something same for all the rounds. Maybe make you lose one health every round and can block once every round. The boss can't control any cards. The bosses could also make some special effect such as poisoning, healing and immune to some cards. 
+- Poisoning can make the player die in 20 rounds instantly. 
+- The healing can heal the boss once when he is dead.
+- Some bosses can be immune to some cards. 
 
 **What contents I may add to the game**
 
