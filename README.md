@@ -54,7 +54,7 @@ I will make some major changes about the code and the game I designed. I will ch
 
 **About making the game playable**
 
-My old design for the game is boring because your opponent can see your card. It is also a two people game on one computer. I have ideas of make my game for only one player. I wants to make bosses and the goal is to kill. The bosses are not smart, they do something same for all the rounds. Maybe make you lose one health every round and can block once every round. The boss can't control any cards. The bosses could also make some special effect such as poisoning, healing and immune to some cards. 
+My old design for the game is boring because your opponent can see your card. It is also a two people game on one computer. I have ideas of make my game for only one player. I wants to make bosses and the goal is to kill the boss. The bosses are not smart, they do something same for all the rounds. Maybe make you lose one health every round and can block once every round. The boss can't control any cards. The bosses could also make some special effect such as poisoning, healing and immune to some cards. 
 - Poisoning can make the player die in 20 rounds instantly. 
 - The healing can heal the boss once when he is dead.
 - Some bosses can be immune to some cards. 
