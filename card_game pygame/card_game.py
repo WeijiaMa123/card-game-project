@@ -11,7 +11,7 @@ black=(0,0,0)
 red=(255,0,0)
 green=(0,255,0)
 clock=pygame.time.Clock()
-pygame.display.set_caption("The war of cards")
+pygame.display.set_caption("吕布除魔记")
 
 
 
@@ -22,16 +22,19 @@ def cards(x,y):
     gameDisplay.blit(card_back, (x, y))
     mouse = pygame.mouse.get_pos()
     click =pygame.mouse.get_pressed()
+    if mouse[0]>x+100:
+        pygame.draw.rect(gameDisplay,red,(50,350,200,290))
+
     largeText = pygame.font.Font('freesansbold.ttf', 30)
     TextSurf, TextRect = text_objects("health:10", largeText)
     TextRect.center = ((1000), (320))
     gameDisplay.blit(TextSurf, TextRect)
-
     pygame.draw.rect(gameDisplay,green, (950, 290, 100, 10))
 
 
 def player_pic(x,y,pic_choice):
     picture= pygame.image.load(pic_choice)
+    picture= pygame.transform.scale(picture,(200,258))
     gameDisplay.blit(picture,(x,y))
 
 
@@ -74,16 +77,16 @@ def game_loop():
 
 
         gameDisplay.fill(white)
-        cards(50,10)
-        cards(300,10)
-        cards(550,10)
+        #cards(50,10)
+        #cards(300,10)
+        #cards(550,10)
 
         cards(50,350)
         cards(300,350)
         cards(550,350)
 
         #player_pic(900,10,"head 1.png")
-        player_pic(900, 350, "head 2.png")
+        player_pic(850, 350, "head 3.png")
 
         pygame.display.update()
         clock.tick(15)
