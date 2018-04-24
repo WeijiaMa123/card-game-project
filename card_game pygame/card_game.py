@@ -22,8 +22,8 @@ def cards(x,y):
     gameDisplay.blit(card_back, (x, y))
     mouse = pygame.mouse.get_pos()
     click =pygame.mouse.get_pressed()
-    if mouse[0]>x+100:
-        pygame.draw.rect(gameDisplay,red,(50,350,200,290))
+    if x+120>mouse[0]>x and y+150>mouse[1]>y:
+        pygame.draw.rect(gameDisplay,red,(x,y,200,290))
 
     largeText = pygame.font.Font('freesansbold.ttf', 30)
     TextSurf, TextRect = text_objects("health:10", largeText)
@@ -37,6 +37,12 @@ def player_pic(x,y,pic_choice):
     picture= pygame.transform.scale(picture,(200,258))
     gameDisplay.blit(picture,(x,y))
 
+
+
+def boss():
+    bosspic=pygame.image.load ("green monster.png")
+    bosspic = pygame.transform.scale(bosspic, (400, 300))
+    gameDisplay.blit(bosspic, (0, 10))
 
 
 
@@ -54,12 +60,21 @@ def message_display(text):
     gameDisplay.blit(TextSurf, TextRect)
 
     pygame.display.update()
-
     time.sleep(2)
-
     game_loop()
 
-    
+
+
+def shuffle():
+    cards = random.randint(1, 7)
+    print(cards)
+    if cards==1:
+        attack()
+
+
+
+#def attack():
+
 
 
 
@@ -86,7 +101,8 @@ def game_loop():
         cards(550,350)
 
         #player_pic(900,10,"head 1.png")
-        player_pic(850, 350, "head 3.png")
+        player_pic(870, 350, "head 3.png")
+        boss()
 
         pygame.display.update()
         clock.tick(15)
@@ -98,6 +114,7 @@ def game_loop():
 
 
 game_loop()
+
 
 
 
