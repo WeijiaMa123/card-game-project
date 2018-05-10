@@ -11,7 +11,8 @@ black=(0,0,0)
 red=(255,0,0)
 green=(0,255,0)
 clock=pygame.time.Clock()
-pygame.display.set_caption("吕布除魔记")
+pygame.display.set_caption("kill the monster")
+boss_life=500
 
 
 
@@ -39,12 +40,11 @@ def player_pic(x,y,pic_choice):
 
 
 
-def boss():
+def boss(boss_life):
     bosspic=pygame.image.load ("green monster.png")
     bosspic = pygame.transform.scale(bosspic, (400, 300))
-    gameDisplay.blit(bosspic, (0, 10))
-
-
+    gameDisplay.blit(bosspic, (20, 10))
+    pygame.draw.rect(gameDisplay,red,(500,50,boss_life,30))
 
 
 
@@ -72,8 +72,9 @@ def shuffle():
         attack()
 
 
-
-#def attack():
+def attack():
+    global boss_life
+    boss_life = boss_life-50
 
 
 
@@ -92,9 +93,6 @@ def game_loop():
 
 
         gameDisplay.fill(white)
-        #cards(50,10)
-        #cards(300,10)
-        #cards(550,10)
 
         cards(50,350)
         cards(300,350)
@@ -102,7 +100,7 @@ def game_loop():
 
         #player_pic(900,10,"head 1.png")
         player_pic(870, 350, "head 3.png")
-        boss()
+        boss(boss_life)
 
         pygame.display.update()
         clock.tick(15)
