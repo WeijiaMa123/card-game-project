@@ -13,7 +13,7 @@ green=(0,255,0)
 clock=pygame.time.Clock()
 pygame.display.set_caption("kill the monster")
 boss_life=500
-
+player_life=100
 
 
 def cards(x,y):
@@ -30,7 +30,9 @@ def cards(x,y):
     TextSurf, TextRect = text_objects("health:10", largeText)
     TextRect.center = ((1000), (320))
     gameDisplay.blit(TextSurf, TextRect)
-    pygame.draw.rect(gameDisplay,green, (950, 290, 100, 10))
+
+def player_health(player_life):
+    pygame.draw.rect(gameDisplay,green, (950, 290, player_life, 15))
 
 
 def player_pic(x,y,pic_choice):
@@ -70,11 +72,17 @@ def shuffle():
     print(cards)
     if cards==1:
         attack()
+    if cards==2:
+        heart()
 
 
 def attack():
     global boss_life
     boss_life = boss_life-50
+
+def heart():
+    global player_life
+    player_life=player_life+10
 
 
 
@@ -101,6 +109,7 @@ def game_loop():
         #player_pic(900,10,"head 1.png")
         player_pic(870, 350, "head 3.png")
         boss(boss_life)
+        player_health(player_life)
 
         pygame.display.update()
         clock.tick(15)
