@@ -26,12 +26,15 @@ def cards(x,y):
     if x+120>mouse[0]>x and y+150>mouse[1]>y:
         pygame.draw.rect(gameDisplay,red,(x,y,200,290))
 
-    largeText = pygame.font.Font('freesansbold.ttf', 30)
-    TextSurf, TextRect = text_objects("health:10", largeText)
-    TextRect.center = ((1000), (320))
-    gameDisplay.blit(TextSurf, TextRect)
+
+
 
 def player_health(player_life):
+    healthstr="health: "+ str(player_life)
+    largeText = pygame.font.Font('freesansbold.ttf', 30)
+    TextSurf, TextRect = text_objects(healthstr, largeText)
+    TextRect.center = ((1000), (320))
+    gameDisplay.blit(TextSurf, TextRect)
     pygame.draw.rect(gameDisplay,green, (950, 290, player_life, 15))
 
 
@@ -43,6 +46,8 @@ def player_pic(x,y,pic_choice):
 
 
 def boss(boss_life):
+    if boss_life <= 0:
+        boss_life=0
     bosspic=pygame.image.load ("green monster.png")
     bosspic = pygame.transform.scale(bosspic, (400, 300))
     gameDisplay.blit(bosspic, (20, 10))
@@ -68,17 +73,19 @@ def message_display(text):
 
 
 def shuffle():
-    cards = random.randint(1, 7)
+    cards = random.randint(1, 3)
     print(cards)
-    if cards==1:
-        attack()
+    if cards==1 :
+        sword_attack()
     if cards==2:
         heart()
 
 
-def attack():
+def sword_attack():
     global boss_life
     boss_life = boss_life-50
+    attack1=pygame.image.load("sword.png")
+    gameDisplay.blit(attack1,(50,350))
 
 def heart():
     global player_life
@@ -121,7 +128,7 @@ def game_loop():
 
 
 game_loop()
-
+sword_attack()
 
 
 
