@@ -35,7 +35,7 @@ def player_health(player_life):
     TextSurf, TextRect = text_objects(healthstr, largeText)
     TextRect.center = ((1000), (320))
     gameDisplay.blit(TextSurf, TextRect)
-    pygame.draw.rect(gameDisplay,green, (950, 290, player_life, 15))
+    pygame.draw.rect(gameDisplay,green, (950, 290, player_life,15))
 
 
 def player_pic(x,y,pic_choice):
