@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff3c69a4-5619-4ba4-8c8a-91124c636d97" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/card_game pygame/class.py" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/card_game pygame/card_game.py" afterPath="$PROJECT_DIR$/card_game pygame/card_game.py" />
+      <change beforePath="$PROJECT_DIR$/card_game pygame/class.py" afterPath="$PROJECT_DIR$/card_game pygame/class.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,8 +16,8 @@
       <file leaf-file-name="class.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/card_game pygame/class.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="54" column="21" lean-forward="false" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+            <state relative-caret-position="290">
+              <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -138,11 +136,6 @@
               <item name="card-game-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="card-game-project" type="462c0819:PsiDirectoryNode" />
               <item name="card_game pygame" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="card-game-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="card-game-project" type="462c0819:PsiDirectoryNode" />
-              <item name="project 1" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -610,8 +603,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/card_game pygame/class.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="54" column="21" lean-forward="false" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+        <state relative-caret-position="290">
+          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
