@@ -66,22 +66,11 @@ class Deck:
 
 
     def draw(self, x,y,number,click):
-
         mouse = pygame.mouse.get_pos()
-        if x + 120 > mouse[0] > x and y + 150 > mouse[1] > y and click== True:
+        if x + 120 > mouse[0] > x and y + 150 > mouse[1] > y and click == True:
             number = random.randint(0, 3)
         gameDisplay.blit(self.images[number], (x, y))
         return number
-
-
-        #mouse = pygame.mouse.get_pos()
-        #click = pygame.mouse.get_pressed()
-        #number = random.randint(0, 3)
-        #if  x + 120 > mouse[0] > x and y + 150 > mouse[1] > y and click[0]==1:
-            #gameDisplay.blit(self.images[number], (x, y))
-
-
-
 
 
 
@@ -92,10 +81,10 @@ def game_loop():
     bossdeck= Deck()
     playerdeck= Deck()
     loop = True
-    boss_num = 2
-    player_num = 2
     boss_life = 500
     player_life = 100
+    boss_num = 0
+    player_num = 0
 
     while loop:
         click=False
@@ -110,22 +99,35 @@ def game_loop():
 
         gameDisplay.fill(white)
 
+
         boss_num=bossdeck.draw(100,350,boss_num,click)
         player_num=playerdeck.draw(500,350,player_num,click)
-        # chabge life based onb card number
+
+        # chaNge life based on card number
         if boss_num==0:
             player_life -= 10
+            time.sleep(2)
+
         if boss_num==1:
             boss_life += 10
+            time.sleep(2)
+
         if boss_num==3:
             player_life -= 25
+            time.sleep(2)
 
         if player_num==0:
             boss_life -= 25
+            time.sleep(2)
+
         if player_num==1:
             player_life += 10
+            time.sleep(2)
+
         if player_num==3:
             boss_life -= 100
+            time.sleep(2)
+
 
         boss.draw(boss_life)
         player.draw(player_life)
